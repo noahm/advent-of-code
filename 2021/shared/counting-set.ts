@@ -19,8 +19,8 @@ export class CountingSet<T> implements ReadonlyCountingSet<T> {
     return this.items.size;
   }
 
-  public add(item: T) {
-    const next = this.get(item) + 1;
+  public add(item: T, amt = 1) {
+    const next = this.get(item) + amt;
     this.items.set(item, next);
     return next;
   }
