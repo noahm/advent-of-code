@@ -20,7 +20,7 @@ export class Grid {
     for (let y = 0; y <= this.max.y; y++) {
       let line = "";
       for (let x = 0; x <= this.max.x; x++) {
-        line += this.rows[y][x] || this.fill;
+        line += (this.rows[y] || [])[x] || this.fill;
       }
       console.log(line);
     }
